@@ -29,13 +29,22 @@ Host the API in a free cloud service (like AWS, GCP, Cloud Foundry, etc) and rem
 http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com:8081/swagger-ui.html
 
 ```shell
-curl -X POST "http://3.128.76.174:8081/login" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"pwd\": \"admin\", \"username\": \"admin\"}"
+curl -X POST "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com:8081/login" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"pwd\": \"admin\", \"username\": \"admin\"}"
+```
+
+Default user Admin
+```json
+{
+  "username":"admin",
+  "pwd": "admin"
+}
 ```
 
 ### Expression Service
 http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/swagger-ui.html
 
-    
+
+Remplace "token" by Beaver + JWT
 
 ```shell
 curl -X GET "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/expressions?expression=2*(7-3)&precision=2" -H "accept: application/json" -H "Authorization: token"
