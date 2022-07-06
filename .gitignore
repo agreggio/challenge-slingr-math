@@ -23,11 +23,6 @@
 hs_err_pid*
 
 
-challenge-slingr-math/HELP.md
-/challenge-slingr-math-web/.target
-/challenge-slingr-math-security/.target
-/challenge-slingr-math-common/.target
-
 ### STS ###
 .apt_generated
 .classpath
@@ -68,7 +63,20 @@ buildNumber.properties
 
 /challenge-slingr-math-web/mvnw
 /challenge-slingr-math-web/mvnw.cmd
+/challenge-slingr-math-web/HELP.md
+/challenge-slingr-math-web/.target
+/challenge-slingr-math-web/.mvn/
+
 /challenge-slingr-math-security/mvnw
 /challenge-slingr-math-security/mvnw.cmd
+/challenge-slingr-math-security/HELP.md
+/challenge-slingr-math-security/.target
+/challenge-slingr-math-security/.mvn/
+
+
 /challenge-slingr-math-common/mvnw
 /challenge-slingr-math-common/mvnw.cmd
+/challenge-slingr-math-common/HELP.md
+/challenge-slingr-math-common/.target
+/challenge-slingr-math-common/.mvn/
+
