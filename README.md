@@ -31,7 +31,7 @@ Host the API in a free cloud service (like AWS, GCP, Cloud Foundry, etc) and rem
 - Maven
 - Spring Boot
 - Docker
-- Docker-compose
+- AWS - EC2
 
 
 #### Login Service
