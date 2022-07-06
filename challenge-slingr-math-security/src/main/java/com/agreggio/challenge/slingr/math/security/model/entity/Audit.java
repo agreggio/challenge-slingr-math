@@ -1,4 +1,4 @@
-package com.agreggio.challenge.slingr.math.security.domain.entity;
+package com.agreggio.challenge.slingr.math.security.model.entity;
 
 
 import lombok.Getter;

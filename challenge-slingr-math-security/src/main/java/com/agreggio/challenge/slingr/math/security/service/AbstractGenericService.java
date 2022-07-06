@@ -3,6 +3,7 @@ package com.agreggio.challenge.slingr.math.security.service;
 
 import com.agreggio.challenge.slingr.math.security.repository.GenericRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.io.Serializable;
 import java.util.List;
@@ -24,11 +25,6 @@ public abstract class AbstractGenericService<T, S extends Serializable> implemen
     }
 
     @Override
-    public T findOne(S id) {
-        return dao.getOne(id);
-    }
-
-    @Override
     public void delete(T entity) {
         dao.delete(entity);
     }
@@ -47,7 +43,6 @@ public abstract class AbstractGenericService<T, S extends Serializable> implemen
     public Optional<T> findById(S id) {
         return dao.findById(id);
     }
-
 
     @Override
     public List<T> saveAll(Iterable<T> iterable) {

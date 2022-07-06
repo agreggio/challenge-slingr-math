@@ -1,8 +1,8 @@
 package com.agreggio.challenge.slingr.math.security.configuration;
 
 
-import com.agreggio.challenge.slingr.math.security.domain.entity.User;
-import com.agreggio.challenge.slingr.math.security.domain.enums.UserRole;
+import com.agreggio.challenge.slingr.math.security.model.entity.User;
+import com.agreggio.challenge.slingr.math.security.model.enums.UserRole;
 import com.agreggio.challenge.slingr.math.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

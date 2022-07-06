@@ -3,9 +3,9 @@ package com.agreggio.challenge.slingr.math.security.component;
 
 
 import com.agreggio.challenge.slingr.math.common.contant.JwtConstant;
-import com.agreggio.challenge.slingr.math.security.domain.entity.Login;
-import com.agreggio.challenge.slingr.math.security.domain.entity.User;
-import com.agreggio.challenge.slingr.math.security.domain.enums.UserRole;
+import com.agreggio.challenge.slingr.math.security.model.entity.Login;
+import com.agreggio.challenge.slingr.math.security.model.entity.User;
+import com.agreggio.challenge.slingr.math.security.model.enums.UserRole;
 import com.agreggio.challenge.slingr.math.security.service.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -1,4 +1,4 @@
-package com.agreggio.challenge.slingr.math.security.configuration;
+package com.agreggio.challenge.slingr.math.common.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

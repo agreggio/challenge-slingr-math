@@ -1,5 +1,4 @@
-package com.agreggio.challenge.slingr.math.security.domain.entity;
-
+package com.agreggio.challenge.slingr.math.security.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,16 +10,17 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-public class Login {
+public class LoginDTO {
 
-    @JsonProperty(value = "user_name")
+    @JsonProperty("username")
+    @ApiModelProperty(required = true)
     private String username;
 
-    @JsonProperty(value = "password")
+    @JsonProperty("pwd")
+    @ApiModelProperty(required = true)
     private String password;
 
-
-    @JsonProperty(value = "token")
+    @JsonProperty("token")
     @ApiModelProperty(hidden = true)
     private String token;
 

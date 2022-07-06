@@ -10,8 +10,6 @@ public interface GenericService<T, S extends Serializable> {
 
     T save(T entity);
 
-    T findOne(S id);
-
     void delete(T entity);
 
     void deleteById(S id);

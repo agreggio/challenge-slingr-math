@@ -1,6 +1,6 @@
 package com.agreggio.challenge.slingr.math.security.service.impl;
 
-import com.agreggio.challenge.slingr.math.security.domain.entity.User;
+import com.agreggio.challenge.slingr.math.security.model.entity.User;
 import com.agreggio.challenge.slingr.math.security.repository.UserRepository;
 import com.agreggio.challenge.slingr.math.security.service.AbstractGenericService;
 import com.agreggio.challenge.slingr.math.security.service.UserService;

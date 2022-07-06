@@ -1,6 +1,6 @@
-package com.agreggio.challenge.slingr.math.security.domain.entity;
+package com.agreggio.challenge.slingr.math.security.model.entity;
 
-import com.agreggio.challenge.slingr.math.security.domain.enums.UserRole;
+import com.agreggio.challenge.slingr.math.security.model.enums.UserRole;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 

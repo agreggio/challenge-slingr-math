@@ -1,11 +1,9 @@
 package com.agreggio.challenge.slingr.math.security.controller;
 
 import com.agreggio.challenge.slingr.math.security.component.LoginComponent;
-import com.agreggio.challenge.slingr.math.security.domain.dto.LoginDTO;
-import com.agreggio.challenge.slingr.math.security.domain.entity.Login;
+import com.agreggio.challenge.slingr.math.security.model.dto.LoginDTO;
+import com.agreggio.challenge.slingr.math.security.model.entity.Login;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 
 @RestController
-@RequestMapping("/")
+@RequestMapping(value = "/user")
 @Slf4j
 public class UserController {
 
@@ -28,8 +27,11 @@ public class UserController {
 	@Autowired
 	private ModelMapper modelMapper;
 
-	@PostMapping("login")
+	@ApiOperation(value = "Retrieve access token by user", produces = APPLICATION_JSON_VALUE)
+	@PostMapping("/login")
 	public ResponseEntity<LoginDTO> login(@RequestBody LoginDTO loginDTO) {
+
+		log.info("{} user is logging", loginDTO.getUsername());
 
 		Login login = modelMapper.map(loginDTO, Login.class);
 
