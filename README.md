@@ -24,8 +24,17 @@ Host the API in a free cloud service (like AWS, GCP, Cloud Foundry, etc) and rem
 
 ### Resolution
 
+#### Technologies
 
-### Login Service
+- Microservices Architecture
+- Java 11
+- Maven
+- Spring Boot
+- Docker
+- Docker-compose
+
+
+#### Login Service
 http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com:8081/swagger-ui.html
 
 ```shell
@@ -40,7 +49,7 @@ Default user Admin
 }
 ```
 
-### Expression Service
+#### Expression Service
 http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/swagger-ui.html
 
 
@@ -55,4 +64,15 @@ curl -X GET "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/expressions
 curl -X POST "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/expressions" -H "accept: application/json" -H "Authorization: token" -H "Content-Type: application/json" -d "{ \"expression\": \"2+3*sqrt(4)\", \"precision\": 3}"
 ```
 
+You can run the application locally with Docker on Linux
 
+```shell
+bash deploy.sh
+```
+
+If you need to run app on IDE you require to install challenge-slinger-math-common dependency in local maven with command
+
+```shell
+cd challenge-slingr-math-common
+mvn install
+```
