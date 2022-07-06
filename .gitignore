@@ -23,8 +23,10 @@
 hs_err_pid*
 
 
-challenge-slingr-math-web/HELP.md
-/Challenge-Birras-Santander-Login/.target
+challenge-slingr-math/HELP.md
+/challenge-slingr-math-web/.target
+/challenge-slingr-math-security/.target
+/challenge-slingr-math-common/.target
 
 ### STS ###
 .apt_generated
@@ -37,7 +39,9 @@ challenge-slingr-math-web/HELP.md
 
 ### IntelliJ IDEA ###
 .idea
-/Challenge-Birras-Santander-Login/.idea
+/challenge-slingr-math-web/.idea
+/challenge-slingr-math-security/.idea
+/challenge-slingr-math-common/.idea
 *.iws
 *.iml
 *.ipr
@@ -62,6 +66,9 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
-/challenge-birras-santander-login/mvnw
-/challenge-birras-santander-login/mvnw.cmd
-
+/challenge-slingr-math-web/mvnw
+/challenge-slingr-math-web/mvnw.cmd
+/challenge-slingr-math-security/mvnw
+/challenge-slingr-math-security/mvnw.cmd
+/challenge-slingr-math-common/mvnw
+/challenge-slingr-math-common/mvnw.cmd
