@@ -1,0 +1,24 @@
+
+version: '3.3'
+
+services:
+
+  math-security-service:
+    image: challenge-slingr-math-security
+    container_name: challenge-slingr-math-security
+    build:
+      context: ./challenge-slingr-math-security
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    restart: always
+
+  math-web-service:
+    image: challenge-slingr-math-web
+    container_name: challenge-slingr-math-web
+    build:
+      context: ./challenge-slingr-math-web
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
