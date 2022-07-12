@@ -22,7 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				 .exceptionHandling().authenticationEntryPoint(customAuthenticationEntryPoint).and()
 			.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 			.authorizeRequests()
-				 .antMatchers(HttpMethod.POST,"/login").permitAll()
+				 .antMatchers(HttpMethod.POST,"/users/login").permitAll()
 				 .antMatchers(HttpMethod.GET,
                     "/v2/api-docs",
                     "/swagger-resources/**",
@@ -30,6 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     "/webjars/**",
                     "favicon.ico").permitAll()
 				 .antMatchers("/expressions/**").hasAnyRole("USER","ADMIN")
+				 .antMatchers("/users/{\\d+}").hasAnyRole("USER","ADMIN")
 				 .antMatchers("/**").hasRole("ADMIN");
 	}
 

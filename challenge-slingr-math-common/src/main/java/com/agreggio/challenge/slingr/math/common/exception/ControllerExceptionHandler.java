@@ -1,5 +1,6 @@
 package com.agreggio.challenge.slingr.math.common.exception;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +31,15 @@ public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
         log.error("The value is not acceptable", exception);
         return buildResponseError(HttpStatus.NOT_ACCEPTABLE, exception.getMessage());
     }
+
+    @ExceptionHandler(JsonProcessingException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<ErrorResponse> handleJsonProcessingException(JsonProcessingException exception) {
+        log.error("Error to convert json to object", exception);
+        return buildResponseError(HttpStatus.INTERNAL_SERVER_ERROR, exception.getMessage());
+    }
+
+
 
     @ExceptionHandler(ScriptException.class)
     @ResponseStatus(HttpStatus.NOT_ACCEPTABLE)

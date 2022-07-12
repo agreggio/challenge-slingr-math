@@ -30,4 +30,10 @@ public class UserServiceImpl extends AbstractGenericService<User, Long> implemen
 		return userRepository.findUserByUserNameAndPassword(username, password)
 				.orElseThrow(() -> new UsernameNotFoundException("User not Found with username: " + username));
 	}
+
+	@Override
+	public User findUser(String username) {
+		return userRepository.findUserByUserName(username)
+				.orElseThrow(() -> new UsernameNotFoundException("User not Found with username: " + username));
+	}
 }

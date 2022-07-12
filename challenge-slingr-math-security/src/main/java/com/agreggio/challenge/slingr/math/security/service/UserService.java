@@ -14,4 +14,7 @@ public interface UserService {
      * @return {@link User}
      */
     User findUser(String username, String password);
+
+
+    User findUser(String username);
 }

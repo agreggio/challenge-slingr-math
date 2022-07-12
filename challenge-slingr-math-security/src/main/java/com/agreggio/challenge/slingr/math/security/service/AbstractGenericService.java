@@ -3,7 +3,6 @@ package com.agreggio.challenge.slingr.math.security.service;
 
 import com.agreggio.challenge.slingr.math.security.repository.GenericRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.io.Serializable;
 import java.util.List;
