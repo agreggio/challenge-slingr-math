@@ -45,7 +45,7 @@ public class UserController {
 
 	@ApiOperation(value = "Retrieve user by userName", produces = APPLICATION_JSON_VALUE)
 	@GetMapping("/{userName}")
-	public ResponseEntity<UserDTO> getUserById(@PathVariable String userName) {
+	public ResponseEntity<UserDTO> getUserByUserName(@PathVariable String userName) {
 
 		log.info("Get user by userName {}", userName);
 

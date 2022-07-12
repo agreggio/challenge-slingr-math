@@ -16,5 +16,12 @@ public interface UserService {
     User findUser(String username, String password);
 
 
+    /**
+     * Find user by.
+     *
+     * @param username {@link String}
+     *
+     * @return {@link User}
+     */
     User findUser(String username);
 }

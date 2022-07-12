@@ -28,12 +28,12 @@ public class UserServiceImpl extends AbstractGenericService<User, Long> implemen
 	@Override
 	public User findUser(String username, String password) {
 		return userRepository.findUserByUserNameAndPassword(username, password)
-				.orElseThrow(() -> new UsernameNotFoundException("User not Found with username: " + username));
+				.orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
 	}
 
 	@Override
 	public User findUser(String username) {
 		return userRepository.findUserByUserName(username)
-				.orElseThrow(() -> new UsernameNotFoundException("User not Found with username: " + username));
+				.orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
 	}
 }
