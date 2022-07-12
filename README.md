@@ -70,7 +70,7 @@ You can run the application locally with Docker on Linux
 bash deploy.sh
 ```
 
-If you need to run app on IDE you require to install challenge-slinger-math-common dependency in local maven with command
+If you need to run app on IDE. Requires to install challenge-slinger-math-common dependency on local maven with command
 
 ```shell
 cd challenge-slingr-math-common
