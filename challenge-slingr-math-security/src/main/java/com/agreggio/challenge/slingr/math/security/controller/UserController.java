@@ -43,12 +43,11 @@ public class UserController {
 
 	}
 
-	@ApiOperation(value = "Retrieve user by id", produces = APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "Retrieve user by userName", produces = APPLICATION_JSON_VALUE)
 	@GetMapping("/{userName}")
 	public ResponseEntity<UserDTO> getUserById(@PathVariable String userName) {
 
 		log.info("Get user by userName {}", userName);
-
 
 		return ResponseEntity.ok(modelMapper.map(userService.findUser(userName), UserDTO.class));
 
