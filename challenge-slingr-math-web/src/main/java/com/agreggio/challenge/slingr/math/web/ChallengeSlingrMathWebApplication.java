@@ -14,4 +14,5 @@ public class ChallengeSlingrMathWebApplication {
 		SpringApplication.run(ChallengeSlingrMathWebApplication.class, args);
 	}
 
+
 }

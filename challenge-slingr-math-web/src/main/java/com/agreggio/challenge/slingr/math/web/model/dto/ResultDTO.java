@@ -1,5 +1,6 @@
 package com.agreggio.challenge.slingr.math.web.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @AllArgsConstructor
@@ -11,5 +12,8 @@ public class ResultDTO {
     private String expression;
     private int precision;
     private Double result;
+
+    @JsonProperty("user")
+    private UserDTO userDTO;
 
 }

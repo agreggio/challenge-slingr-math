@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-
 import java.util.Locale;
 
 import static com.agreggio.challenge.slingr.math.web.constant.ExpressionConstant.FUNCTIONS;
@@ -37,6 +36,8 @@ public class ExpressionServiceImpl implements ExpressionService {
         }
 
         double result = ((Number) scriptEngine.eval(expression)).doubleValue();
+
+        log.info("Expression result: {} ", result);
 
         return new Result(tmpExpression, precision, MathUtils.round(result, precision));
 
