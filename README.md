@@ -50,18 +50,18 @@ Default user Admin
 ```
 
 #### Expression Service
-http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/swagger-ui.html
+http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com:8080/swagger-ui.html
 
 
 Remplace "token" by Beaver + JWT
 
 ```shell
-curl -X GET "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/expressions?expression=2*(7-3)&precision=2" -H "accept: application/json" -H "Authorization: token"
+curl -X GET "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com:8080/expressions?expression=2*(7-3)&precision=2" -H "accept: application/json" -H "Authorization: token"
 ```
 
 
 ```shell
-curl -X POST "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com/expressions" -H "accept: application/json" -H "Authorization: token" -H "Content-Type: application/json" -d "{ \"expression\": \"2+3*sqrt(4)\", \"precision\": 3}"
+curl -X POST "http://ec2-3-128-76-174.us-east-2.compute.amazonaws.com:8080/expressions" -H "accept: application/json" -H "Authorization: token" -H "Content-Type: application/json" -d "{ \"expression\": \"2+3*sqrt(4)\", \"precision\": 3}"
 ```
 
 You can run the application locally with Docker on Linux
